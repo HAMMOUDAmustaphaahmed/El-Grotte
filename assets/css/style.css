@@ -127,12 +127,12 @@ h6 {
 }
 
 #main {
-  margin-left: 300px;
+  margin-left: 250px;
 }
 
 @media (max-width: 1199px) {
   #header {
-    left: -300px;
+    left: -100px;
   }
 
   #main {
@@ -533,16 +533,19 @@ section {
 --------------------------------------------------------------*/
 .portfolio .portfolio-item {
   margin-bottom: 30px;
+  margin-right: 100px;
+  
 }
 
 .portfolio #portfolio-flters {
   padding: 0;
-  margin: 0 auto 35px auto;
+  margin: 0 100px 35px 100px;
   list-style: none;
   text-align: center;
   background: #fff;
   border-radius: 50px;
   padding: 2px 15px;
+  
 }
 
 .portfolio #portfolio-flters li {
@@ -556,11 +559,13 @@ section {
   color: #272829;
   margin-bottom: 5px;
   transition: all 0.3s ease-in-out;
+  
 }
 
 .portfolio #portfolio-flters li:hover,
 .portfolio #portfolio-flters li.filter-active {
   color: #149ddd;
+  
 }
 
 .portfolio #portfolio-flters li:last-child {
@@ -572,6 +577,7 @@ section {
   position: relative;
   overflow: hidden;
   z-index: 1;
+  
 }
 
 .portfolio .portfolio-wrap::before {
@@ -585,6 +591,7 @@ section {
   transition: all ease-in-out 0.3s;
   z-index: 2;
   opacity: 0;
+  
 }
 
 .portfolio .portfolio-wrap .portfolio-links {
@@ -597,6 +604,7 @@ section {
   transition: all ease-in-out 0.3s;
   display: flex;
   justify-content: center;
+  
 }
 
 .portfolio .portfolio-wrap .portfolio-links a {
@@ -634,10 +642,12 @@ section {
 --------------------------------------------------------------*/
 .portfolio-details {
   padding-top: 40px;
+  
 }
 
 .portfolio-details .portfolio-details-slider img {
   width: 100%;
+  
 }
 
 .portfolio-details .portfolio-details-slider .swiper-pagination {
@@ -1091,52 +1101,68 @@ section {
   color: #f4f6fd;
   
   position:center;
- 
-  
-  background: #040b14;
+ margin-left: 50%;
+ display:inline-block ;  
+  background: #072c5e;
+  border-radius:15%;
 }
 
-.portfolio .wrapper{
-  width: 500px;
-  height: 500px;
+/* Define a fixed size for the slider container */
+/* Define a fixed size for the slider container */
+.slider {
+  width: 1000px; /* Adjust as needed */
+  height: 600px; /* Adjust as needed */
+  perspective: 1200px;
+  position: relative;
+}
+
+.slides-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  display: flex;
+  flex-wrap: wrap; /* Display images in rows */
+}
+
+.slide {
+  width: 33.33%; /* 3 images in each line (adjust as needed) */
+  height: 33.33%; /* 3 images in each line (adjust as needed) */
   position: relative;
   transform-style: preserve-3d;
-  animation: Anim 30s linear infinite;
+  transition: transform 0.5s;
+  box-sizing: border-box;
+  padding: 5px; /* Add padding between images */
 }
 
-@keyframes Anim {
-  0%{
-    transform: perspective(250px) rotateY(0);
-  }
-  100%{
-    transform: perspective(250px) rotateY(360deg);
-  }
+.slide img {
+  width: 100%; /* Ensure images take up 100% of the slide's width */
+  height: 100%; /* Ensure images take up 100% of the slide's height */
+  object-fit: cover; /* Maintain aspect ratio and cover entire slide */
+  transition: transform 0.3s; /* Transition for zoom effect */
 }
-.portfolio .wrapper span{
+
+.slide:hover img {
+  transform: scale(1.2); /* Zoom effect on hover */
+}
+
+.slider-controls {
   position: absolute;
-  top: 0;
+  bottom: 20px;
   left: 0;
-  width: 50%;
-  height: 50%;
-  cursor: auto;
-  transform-origin: center;
-  transform-style: preserve-3d;
-  transform: rotateY(calc(45deg * var(--i))) translateZ(400px);
-}
-.portfolio .wrapper .span img{
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  border: 5px solid #000;
-  transition: 1s;
+  right: 0;
+  text-align: center;
 }
 
-.portfolio .wrapper span:hover img{
-  transform: scale(1.2);
-  box-shadow: 0 0 10px #3a87ff,
-              0 0 25px #27ae60,
-              0 0 40px #3a86ff,
-              0 0 70px #27ae60,
-              0 0 100px -30px #3a86ff,
-              0 0 125 -50px #27ae60;
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+button:hover {
+  background-color: #2980b9;
 }
