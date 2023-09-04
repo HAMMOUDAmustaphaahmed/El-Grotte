@@ -472,7 +472,7 @@
                 <img src="./assets/img/4.jpeg" alt="Image 3">
             </div>
             <div class="slide">
-              <img src="./assets/img/5.jpeg" alt="Image 3">
+              <img src="./assets/img/7.jpg" alt="Image 3">
           </div>
           <div class="slide">
             <img src="./assets/img/6.jpeg" alt="Image 3">
@@ -488,7 +488,49 @@
       
     </section><!-- End Portfolio Section -->
 
-   
+
+<!-- ======= Video Section ======= -->
+<section id="video" class="resume section-bg">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Présentation</h2>
+      <!-- Add any additional content or titles here -->
+    </div>
+
+    <!-- Add your video here -->
+    <div class="row-video">
+      <div class="col-lg-12">
+        <!-- Add your video embed code here, for example, using an iframe -->
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="video" id="videoIframe" width="700px" height="600px" src="./assets/video/video1.mp4"></iframe>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section><!-- End Video Section -->
+
+<script>
+  // Get the iframe element
+  const videoIframe = document.getElementById('videoIframe');
+
+  // Add an event listener to the iframe to mute the video when it's loaded
+  videoIframe.addEventListener('load', () => {
+    // Access the contentWindow of the iframe and its document
+    const iframeDocument = videoIframe.contentWindow.document;
+
+    // Find the video element within the iframe
+    const videoElement = iframeDocument.querySelector('video');
+
+    // Check if a video element was found and mute it
+    if (videoElement) {
+      videoElement.muted = true;
+    }
+  });
+</script>
+
+
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
@@ -504,7 +546,7 @@
             <div class="info">
               <div class="address">
                 <i class="bi bi-geo-alt"></i>
-                <h4>Location:</h4>
+                <h4>Localisation:</h4>
               </div>
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1618.5920891694493!2d10.84117083892736!3d35.77085189313959!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x130212d51f96744b%3A0x170f5bfcf3f0c753!2sLa%20grotta%20di%20Corsario!5e0!3m2!1sfr!2stn!4v1693483653307!5m2!1sfr!2stn" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                </div>

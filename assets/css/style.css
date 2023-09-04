@@ -1101,7 +1101,7 @@ section {
   color: #f4f6fd;
   
   position:center;
- margin-left: 50%;
+ margin-left: 45%;
  display:inline-block ;  
   background: #072c5e;
   border-radius:15%;
@@ -1165,4 +1165,9 @@ button {
 
 button:hover {
   background-color: #2980b9;
+}
+
+
+.video{
+  width:"700px"; height:"600px"; display: inline-block; margin-left: 200px; 
 }
