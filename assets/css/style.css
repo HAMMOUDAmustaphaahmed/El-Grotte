@@ -70,10 +70,11 @@ h6 {
 --------------------------------------------------------------*/
 #header {
   position: fixed;
+  display: block;
   top: 0;
   left: 0;
   bottom: 0;
-  width: 300px;
+  width: 200px;
   transition: all ease-in-out 0.5s;
   z-index: 9997;
   transition: all 0.5s;
@@ -85,7 +86,7 @@ h6 {
 #header .profile img {
   margin: 15px auto;
   display: block;
-  width: 120px;
+  width: 200px;
   border: 8px solid #2c2f3f;
 }
 
@@ -132,12 +133,19 @@ h6 {
 
 @media (max-width: 1199px) {
   #header {
-    left: -100px;
+    left: -200px;
   }
 
   #main {
     margin-left: 0;
   }
+}
+@media (max-width: 768px) {
+  #header {
+    width: 200px; /* Reduce the width for smaller screens */
+  }
+
+ 
 }
 
 /*--------------------------------------------------------------
@@ -533,13 +541,17 @@ section {
 --------------------------------------------------------------*/
 .portfolio .portfolio-item {
   margin-bottom: 30px;
-  margin-right: 100px;
+  margin-right: 400px;
+  margin-left: 400px;
   
+}
+.portfolio .section-title{
+  margin-left: 20px;
 }
 
 .portfolio #portfolio-flters {
   padding: 0;
-  margin: 0 100px 35px 100px;
+  margin: 0 400px 35px 400px;
   list-style: none;
   text-align: center;
   background: #fff;
@@ -636,6 +648,17 @@ section {
   opacity: 1;
   bottom: 0;
 }
+.portfolio .slider{
+  margin-left: 300px;
+}
+
+@media(max-width="768px"){
+  .portfolio .slider{
+    position: center;
+    margin: 0px 0px 0px 0px;
+    display: inline-block;
+  }
+}
 
 /*--------------------------------------------------------------
 # Portfolio Details
@@ -704,13 +727,14 @@ section {
   padding: 0;
 }
 
+@media(max-width="1080px"){
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
 .services .icon-box {
   margin-bottom: 20px;
 }
-
+}
 .services .icon {
   float: left;
   display: flex;
@@ -1098,14 +1122,19 @@ section {
 --------------------------------------------------------------*/
 #footer {
   
-  color: #f4f6fd;
+  color: #3d3d3f;
   
   position:center;
- margin-left: 45%;
- display:inline-block ;  
-  background: #072c5e;
+ 
+  display:block ; 
+  
+  background: rgba(0, 0, 0, 0.3);
   border-radius:15%;
 }
+#footer .container{
+  margin-top: 200%;
+}
+
 
 /* Define a fixed size for the slider container */
 /* Define a fixed size for the slider container */
@@ -1171,3 +1200,5 @@ button:hover {
 .video{
   width:"700px"; height:"600px"; display: inline-block; margin-left: 300px; 
 }
+/* Styling for the sidebar */
+

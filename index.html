@@ -34,7 +34,39 @@
 
   <!-- ======= Mobile nav toggle button ======= -->
   <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+  <header id="header">
+    <div class="d-flex flex-column">
 
+      <div class="profile">
+        <img src="assets/img/a.jpg" alt="" class="img-fluid rounded-circle">
+       
+        
+      </div>
+
+      <nav id="navbar" class="nav-menu navbar">
+        <ul>
+          <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+      
+          <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Menu</span></a></li>
+          <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Presentation</span></a></li>
+          
+          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+    </div>
+    <footer id="footer">
+      <div class="container">
+        <div class="copyright">
+          &copy; Copyright <strong><span>2023</span></strong>
+        </div>
+        <div class="credits">
+         
+          Designed by <a href="#">AMH</a>
+        </div>
+      </div>
+    </footer><!-- End  Footer -->
+  </header><!-- End Header -->
+  
 
 
   <!-- ======= Hero Section ======= -->
@@ -430,9 +462,7 @@
          
       </div>
       
-    </section><!-- End Resume Section -->
-    <section id="resume" class="resume">
-      <div class="container">
+   
 
         <div class="section-title">
           <h2>Specialité De La Maison </h2>
@@ -452,11 +482,15 @@
             <h4>Délice Terre et Mer</h4><p>2 Personnes</p><i>(Brochette de Poulet, Brochette de Crevettes, Brochette de Boeuf, Médaillon de Boeuf, Spaghetti Chevrrette, Fajitas Fruits de Mer, Cordon Bleu, Chicken Nuggets, Dorade Grillée, Cotelette d'Agneau.)<h6>126.000</h6></i>
           </div>
 
-          </div>
+          
       </div></section>
 
     <!-- ======= Portfolio Section ======= -->
     <section id="portfolio" class="portfolio section-bg">
+      <div class="section-title" >
+        <h2 >Présentation</h2>
+        <!-- Add any additional content or titles here -->
+      </div>
       <div class="slider">
           <div class="slides-container">
               <div class="slide">
@@ -486,17 +520,14 @@
 
         
       
-    </section><!-- End Portfolio Section -->
+    
 
 
 <!-- ======= Video Section ======= -->
-<section id="video" class="resume section-bg">
+<section id="portfolio" class="resume section-bg">
   <div class="container">
 
-    <div class="section-title">
-      <h2>Présentation</h2>
-      <!-- Add any additional content or titles here -->
-    </div>
+   
 
     <!-- Add your video here -->
     <div class="row-video">
@@ -511,24 +542,7 @@
   </div>
 </section><!-- End Video Section -->
 
-<script>
-  // Get the iframe element
-  const videoIframe = document.getElementById('videoIframe');
-
-  // Add an event listener to the iframe to mute the video when it's loaded
-  videoIframe.addEventListener('load', () => {
-    // Access the contentWindow of the iframe and its document
-    const iframeDocument = videoIframe.contentWindow.document;
-
-    // Find the video element within the iframe
-    const videoElement = iframeDocument.querySelector('video');
-
-    // Check if a video element was found and mute it
-    if (videoElement) {
-      videoElement.muted = true;
-    }
-  });
-</script>
+</section><!-- End Portfolio Section -->
 
 
 
@@ -590,17 +604,7 @@
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>2023</span></strong>
-      </div>
-      <div class="credits">
-       
-        Designed by <a href="#">AMH</a>
-      </div>
-    </div>
-  </footer><!-- End  Footer -->
+ 
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 

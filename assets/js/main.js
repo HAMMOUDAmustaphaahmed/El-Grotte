@@ -21,7 +21,22 @@
 
  
   
-  
+   // Get the iframe element
+   const videoIframe = document.getElementById('videoIframe');
+
+   // Add an event listener to the iframe to mute the video when it's loaded
+   videoIframe.addEventListener('load', () => {
+     // Access the contentWindow of the iframe and its document
+     const iframeDocument = videoIframe.contentWindow.document;
+ 
+     // Find the video element within the iframe
+     const videoElement = iframeDocument.querySelector('video');
+ 
+     // Check if a video element was found and mute it
+     if (videoElement) {
+       videoElement.muted = true;
+     }
+   });
 
 
 
