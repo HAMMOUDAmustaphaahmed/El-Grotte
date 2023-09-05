@@ -649,7 +649,7 @@ section {
   bottom: 0;
 }
 .portfolio .slider{
-  margin-left: 300px;
+  margin-left: 10px;
 }
 
 @media(max-width="768px"){
@@ -1197,8 +1197,13 @@ button:hover {
 }
 
 
-.video{
-  width:"700px"; height:"600px"; display: inline-block; margin-left: 300px; 
+.portfolio .container .row-video .col-lg-12 .embed-responsive .video{
+  width:"700px"; height:"600px"; display: inline-block; margin-left: 1300px; 
 }
+  @media(max-width="768px"){
+    .portfolio .container .row-width  .col-lg-12 .embed-responsive .video .Iframevideo{
+      width: 350px; height: 600px; display: inline-block; margin-left:1300px;
+    }
+  }
 /* Styling for the sidebar */
 
